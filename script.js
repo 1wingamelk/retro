@@ -8,10 +8,11 @@ const resultText = document.getElementById('result-text');
 let isStarted = false;
 let isCoolingDown = false; // Состояние кулдауна
 
-// URL-ы заглушек изображений
+// ВНИМАНИЕ: ЗДЕСЬ ВСТАВЬТЕ ПУТИ К ВАШИМ ИЗОБРАЖЕНИЯМ
+// Убедитесь, что файлы up1.jpg и down1.jpg находятся в той же папке или укажите правильный путь.
 const imagePlaceholders = {
-    up: 'https://placehold.co/400x225/59e890/000000?text=UP+%E2%96%B2+%28up1.jpg%29',
-    down: 'https://placehold.co/400x225/e85959/000000?text=DOWN+%E2%96%BC+%28down1.jpg%29'
+    up: 'up1.jpg',
+    down: 'down1.jpg'
 };
 
 /**
@@ -38,7 +39,7 @@ function handleStartClick(e) {
         imageDisplay.classList.remove('hidden');
     }
     
-    // Определяем, какая кнопка СЕЙЧАС активна (после возможного изменения состояния)
+    // Определяем, какая кнопка СЕЙЧАС активна
     const activeButton = isStarted ? startButtonMoved : startButtonInitial;
 
     // 2. Запуск кулдауна (5 секунд)
@@ -76,7 +77,7 @@ function handleStartClick(e) {
     // Случайный выбор UP или DOWN
     const choice = Math.random() < 0.5 ? 'up' : 'down';
     
-    // Обновление изображения и текста
+    // Получение пути к изображению
     const imageURL = imagePlaceholders[choice];
     const overlayText = choice === 'up' ? 'UP' : 'DOWN';
 
