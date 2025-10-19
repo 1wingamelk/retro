@@ -1,1 +1,64 @@
-f
+/* Стили для имитации шрифта Tahoma */
+.font-tahoma {
+    font-family: 'Tahoma', 'Verdana', sans-serif;
+    font-weight: 700;
+}
+
+/* Основной контейнер, имитирующий экран телефона */
+.phone-screen {
+    background-color: #383838;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 80px; /* Отступ для нижней фиксированной кнопки */
+}
+
+/* Стили для кнопки до первого нажатия (с белым кругом) */
+.start-button-initial {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+    background-color: transparent;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Стили для кнопки после первого нажатия (с белой подложкой) */
+.start-button-moved {
+    width: 150px;
+    padding: 0.75rem 0;
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease-in-out;
+}
+
+/* Стили для центрирования и позиционирования текста поверх изображения */
+.image-container {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    aspect-ratio: 16 / 9; /* Соотношение сторон для изображений */
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem; /* Крупный текст */
+    color: black;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.overlay-text.visible {
+    opacity: 1;
+}
