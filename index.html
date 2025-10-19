@@ -1,1 +1,45 @@
-index
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Trader App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900">
+
+    <div id="app-container" class="phone-screen w-full max-w-sm mx-auto shadow-2xl">
+
+        <header class="py-6 w-full flex justify-center">
+            <img src="https://placehold.co/120x40/59e890/383838?text=RETRO+LOGO" alt="Retro Logo Placeholder" class="rounded-lg shadow-lg">
+        </header>
+
+        <main id="main-content" class="flex flex-col items-center justify-center flex-grow w-full px-4 space-y-8 mt-12 mb-12">
+
+            <div id="image-display" class="image-container hidden">
+                <img id="result-image" src="" alt="Up or Down result" class="w-full h-full object-cover rounded-lg shadow-xl" onerror="this.src='https://placehold.co/400x225/4b5563/ffffff?text=Loading+Error'">
+                <p id="result-text" class="overlay-text font-tahoma"></p>
+            </div>
+            
+            <button id="start-button-initial-pos" class="start-button-initial font-tahoma text-2xl tracking-wider">
+                Start
+            </button>
+            
+            <button id="start-button-moved-pos" class="start-button-moved font-tahoma text-xl tracking-wider hidden">
+                Start
+            </button>
+
+        </main>
+
+        <footer class="fixed bottom-0 w-full max-w-sm">
+            <a href="https://1widpl.life/" target="_blank" id="retro-trader-button" class="bg-[#90e859] w-full block text-center py-4 font-tahoma text-lg text-black rounded-t-xl shadow-2xl transition duration-200 hover:bg-[#7bc84b]">
+                Retro Trader
+            </a>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
